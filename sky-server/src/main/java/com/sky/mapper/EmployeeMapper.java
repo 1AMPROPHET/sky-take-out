@@ -23,9 +23,22 @@ public interface EmployeeMapper {
     void insert(Employee employee);
 
     /**
-     * 分压查询
+     * 分页查询
      * @param employeePageQueryDTO 分页查询
      * @return 返回分页查询结果
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 修改账号属性
+     * @param employee 员工
+     */
+    void update(Employee employee);
+
+    /**
+     * 根据id查询
+     * @param id id
+     * @return 员工
+     */
+    Employee getById(Long id);
 }
