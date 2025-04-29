@@ -16,4 +16,16 @@ public interface DishFlavorMapper {
      */
     @AutoFill(value = OperationType.INSERT)
     void insertBatch(List<DishFlavor> flavors);
+
+    /**
+     * 根据菜品id删除口味id
+     * @param dishId
+     */
+    void deleteByDishId(Long dishId);
+
+    /**
+     * 根基菜品id集合批量删除口味数据
+     * @param ids
+     */
+    void deleteByDishIds(List<Long> dishIds);
 }
